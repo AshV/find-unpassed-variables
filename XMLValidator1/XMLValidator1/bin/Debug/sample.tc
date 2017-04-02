@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<testcases version="2">
+
+  <testcase name="One">
+    <data>
+      <var name="v1"/>
+      <var name="v2"/>
+      <var name="v3"/>
+    </data>
+    <ops>
+      <call name="d">
+        <dataset ref="context">
+          <map var="1" value="@1"/>
+        </dataset>
+      </call>
+    </ops>
+  </testcase>
+  <testcase name="Two">
+    <data>
+      <var name="v1"/>
+      <var name="v2"/>
+      <var name="v3"/>
+    </data>
+    <ops>
+      <call name="d">
+        <dataset ref="context">
+          <map var="1" value="@1"/>
+        </dataset>
+      </call>
+    </ops>
+  </testcase>
+
+  <testcase name="Three">
+    <data>
+      <var name="v1"/>
+      <var name="v2"/>
+      <var name="v3"/>
+    </data>
+    <ops>
+      <call name="d">
+        <dataset ref="context">
+          <map var="1" value="@1"/>
+        </dataset>
+      </call>
+    </ops>
+  </testcase>
+  
+</testcases>
+
+

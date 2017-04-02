@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<testcases version="2.0">
+  <testcase qcid="96099" name="Edit Employee information page and check View Audits page" desc="Edit Employee information page and check View Audits page">
+    <filelog>
+      <author>Uday Kumar B</author>
+    </filelog>
+    <identifiers>
+      <include path="/testcases/APIs/_APIUtility/_APIUtility.id"/>
+    </identifiers>
+    <data>
+      <var name="@CSCOnsole_ClientID"/>
+      <var name="@CSCOnsole_UserName"/>
+      <var name="@CSCOnsole_Password"/>
+
+      <var name="@RIA_ClientID"/>
+      <var name="@RIA_UserID"/>
+      <var name="@RIA_Password"/>
+ 
+      <var name="@True"/>
+      <var name="@CSConsole_URL"/>
+      <var name="@RIA_URL"/>
+
+      <var name="@DepartmentName"/>
+      <var name="@Emp_FirstName"/>
+      <var name="@Emp_LastName"/>
+      <var name="@PayGroupName"/>
+      <var name="@EmpClass"/>
+      <var name="@Crew"/>
+      <var name="@EmpPosition"/>
+      <var name="@EmpCostCenter"/>
+      <var name="@EditSkillLevel"/>
+      <var name="@BaseRate"/>
+
+      <var name="@EditPayGroupName"/>
+      <var name="@EditClass"/>
+      <var name="@EditDepartment"/>
+      <var name="@EditCrew"/>
+      
+      <var name="@LinkNamesByDescOrder" optional="true"/>
+      <var name="@ApplicationName" optional="true"/>
+      <var name="@ColumnIndex" optional="true"/>
+      <var name="@ValueToVerify" optional="true"/>
+    </data>
+    <ops>
+      <call name="CSCOnsoleBasestate" path ="/testcases/_common/common.tc">
+        <dataset ref="context" >
+          <map var="@CSCOnsole_ClientID" value="@CSCOnsole_ClientID"/>
+          <map var="@CSCOnsole_UserName" value="@CSCOnsole_UserName"/>
+          <map var="@CSCOnsole_Password" value="@CSCOnsole_Password"/>
+          <map var="@CSConsole_URL" value="@CSConsole_URL"/>
+        </dataset>
+      </call>
+      
+      <navigate path="EmployeeInformation"/>
+      <call name ="AddingAnEmployeeWithOptionalData" path="/testcases/APIs/csconsole/EmployeeInformation/EmployeeInformation.tc">
+        <dataset ref="context">
+          <map var="@FirstName" value="@E1mp_FirstName"/>
+          <map var="@FirstName" value="@Em2p_FirstName"/>
+          <map var="@FirstName" value="@Emp3_FirstName"/>
+          <map var="@FirstName" value="@Emp_4FirstName"/>
+          <map var="@FirstName" value="@Emp_FirstName"/>
+          <map var="@ID" value="@Emp_FirstName"/>
+          <map var="@LastName" value="@Emp_LastName"/>
+          <map var="@Save"  value="@True"/>
+        </dataset>
+      </call>
+
+      <call name ="EditingEmployeeInformationInMainTab" path="/testcases/APIs/csconsole/EmployeeInformation/EmployeeInformation.tc">
+        <dataset ref="context">
+          <map var="@EditPayGroupName" value="@PayGroupName"/>
+          <map var="@EditClass" value="@EmpClass"/>
+          <map var="@EditDepartmentName" value="@DepartmentName"/>
+          <map var="@EditCrew" value="@Crew"/>
+          <map var="@EditCostCenterName" value="@EmpCostCenter"/>
+          <map var="@EditPosition" value="@EmpPosition"/>
+          <map var="@EditSkillLevel"  value="@EditSkillLevel"/>
+          <map var="@BaseRate" value="@BaseRate"/>
+          <map var="@Save"  value="@True"/>
+        </dataset>
+      </call>
+
+      <call name ="EditingEmployeeInformationInMainTab" path="/testcases/APIs/csconsole/EmployeeInformation/EmployeeInformation.tc">
+        <dataset ref="context">
+          <map var="@EditPayGroupName" value="@EditPayGroupName"/>
+          <map var="@EditClass" value="@EditClass"/>
+          <map var="@EditDepartmentName" value="@EditDepartment"/>
+          <map var="@EditCrew" value="@EditCrew"/>
+          <map var="@Save"  value="@True"/>
+          <map var="@Console" value="@True"/>
+        </dataset>
+      </call>
+            
+      <call name="RIABasestate" path="/testcases/_common/common.tc">
+        <dataset ref="context">
+          <map var="@RIA_ClientID" value="@RIA_ClientID"/>
+          <map var="@RIA_UserID" value="@RIA_UserID"/>
+          <map var="@RIA_Password" value="@RIA_Password"/>
+          <map var="@RIA_URL" value="@RIA_URL"/>
+        </dataset>
+      </call>
+
+      <call name="Filter for all columns to View Audits" path="/testcases/APIs/RIA/Admin/ViewAudits/ViewAudits.tc">
+        <dataset ref="context">
+          <map var="@NavigatePath" value="Admin_ViewAudits"/>
+          <map var="@LinkNamesByDescOrder" value="@LinkNamesByDescOrder"/>
+        </dataset>
+      </call>
+
+      <call name="Verify filtered data for all columns" path="/testcases/APIs/RIA/Admin/ViewAudits/ViewAudits.tc">
+        <dataset ref="context">
+          <map var="@ApplicationName" value="@ApplicationName"/>
+          <map var="@ColumnIndex" value="@ColumnIndex"/>
+          <map var="@ValueToVerify" value="@ValueToVerify"/>
+        </dataset>
+      </call>
+
+      <assert>
+        <log message="Verified in above calling function"/>
+      </assert>
+    </ops>
+  </testcase>
+  
+</testcases>

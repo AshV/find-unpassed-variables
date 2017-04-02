@@ -1,0 +1,9 @@
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\bin\Debug\FindUnPassedVariables.exe.config
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\bin\Debug\FindUnPassedVariables.exe
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\bin\Debug\FindUnPassedVariables.pdb
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.csprojResolveAssemblyReference.cache
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.Form1.resources
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.Properties.Resources.resources
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.csproj.GenerateResource.Cache
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.exe
+c:\users\riteshs\documents\visual studio 2013\Projects\FindUnPassedVariables\FindUnPassedVariables\obj\Debug\FindUnPassedVariables.pdb
